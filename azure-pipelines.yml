@@ -24,6 +24,9 @@ steps:
     arguments: '--no-restore --configuration $(buildConfiguration)'
     projects: '**/*.csproj'
 
+- task: AdvancedSecurity-Dependency-Scanning@1
+
+- task: AdvancedSecurity-Publish@1
 - task: DotNetCoreCLI@2
   displayName: 'Pack the project - $(buildConfiguration)'
   inputs:
